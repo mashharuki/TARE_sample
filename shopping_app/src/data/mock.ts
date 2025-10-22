@@ -1,0 +1,221 @@
+import { Product, Category, Review } from '../types';
+
+// カテゴリデータ
+export const CATEGORIES: Category[] = [
+  { id: '1', name: 'tops', name_ja: 'トップス', slug: 'tops', sort_order: 1, is_active: true },
+  { id: '2', name: 'bottoms', name_ja: 'ボトムス', slug: 'bottoms', sort_order: 2, is_active: true },
+  { id: '3', name: 'dresses', name_ja: 'ワンピース', slug: 'dresses', sort_order: 3, is_active: true },
+  { id: '4', name: 'outerwear', name_ja: 'アウター', slug: 'outerwear', sort_order: 4, is_active: true },
+  { id: '5', name: 'accessories', name_ja: 'アクセサリー', slug: 'accessories', sort_order: 5, is_active: true },
+];
+
+// 商品データ
+export const PRODUCTS: Product[] = [
+  {
+    id: '1',
+    name: 'エレガントブラウス',
+    description: 'シルクのような光沢感が特徴のエレガントなブラウス。オフィスカジュアルからフォーマルまで幅広く活躍します。',
+    price: 12800,
+    category: 'tops',
+    brand: 'Luxe Style',
+    sizes: ['S', 'M', 'L', 'XL'],
+    colors: ['ホワイト', 'ベージュ', 'ブラック', 'ネイビー'],
+    images: [
+      'https://trae-api-sg.mchost.guru/api/ide/v1/text_to_image?prompt=elegant%20blouse%20white%20silk%20like%20fabric%20professional%20photography%20fashion%20minimalist%20background&image_size=square_hd',
+      'https://trae-api-sg.mchost.guru/api/ide/v1/text_to_image?prompt=elegant%20blouse%20beige%20silk%20like%20fabric%20professional%20photography%20fashion%20minimalist%20background&image_size=square_hd',
+      'https://trae-api-sg.mchost.guru/api/ide/v1/text_to_image?prompt=elegant%20blouse%20black%20silk%20like%20fabric%20professional%20photography%20fashion%20minimalist%20background&image_size=square_hd'
+    ],
+    stock_quantity: 25,
+    is_active: true,
+    created_at: '2024-01-15T10:00:00Z',
+    updated_at: '2024-01-15T10:00:00Z',
+  },
+  {
+    id: '2',
+    name: 'テーパードパンツ',
+    description: '美しいシルエットが特徴のテーパードパンツ。ストレッチ素材で動きやすく、オールシーズン着用可能です。',
+    price: 15800,
+    category: 'bottoms',
+    brand: 'Modern Fit',
+    sizes: ['XS', 'S', 'M', 'L', 'XL'],
+    colors: ['ブラック', 'ネイビー', 'グレー', 'ベージュ'],
+    images: [
+      'https://trae-api-sg.mchost.guru/api/ide/v1/text_to_image?prompt=tapered%20pants%20black%20professional%20photography%20fashion%20minimalist%20background%20modern%20style&image_size=square_hd',
+      'https://trae-api-sg.mchost.guru/api/ide/v1/text_to_image?prompt=tapered%20pants%20navy%20professional%20photography%20fashion%20minimalist%20background%20modern%20style&image_size=square_hd',
+      'https://trae-api-sg.mchost.guru/api/ide/v1/text_to_image?prompt=tapered%20pants%20gray%20professional%20photography%20fashion%20minimalist%20background%20modern%20style&image_size=square_hd'
+    ],
+    stock_quantity: 18,
+    is_active: true,
+    created_at: '2024-01-14T10:00:00Z',
+    updated_at: '2024-01-14T10:00:00Z',
+  },
+  {
+    id: '3',
+    name: 'Aラインワンピース',
+    description: '女性らしいAラインシルエットのワンピース。一枚で着映えするデザインで、様々なシーンに対応します。',
+    price: 22800,
+    category: 'dresses',
+    brand: 'Feminine Style',
+    sizes: ['S', 'M', 'L'],
+    colors: ['ブラック', 'ネイビー', 'ワインレッド', 'ダークグリーン'],
+    images: [
+      'https://trae-api-sg.mchost.guru/api/ide/v1/text_to_image?prompt=a%20line%20dress%20black%20elegant%20feminine%20professional%20photography%20fashion%20minimalist%20background&image_size=square_hd',
+      'https://trae-api-sg.mchost.guru/api/ide/v1/text_to_image?prompt=a%20line%20dress%20navy%20elegant%20feminine%20professional%20photography%20fashion%20minimalist%20background&image_size=square_hd',
+      'https://trae-api-sg.mchost.guru/api/ide/v1/text_to_image?prompt=a%20line%20dress%20wine%20red%20elegant%20feminine%20professional%20photography%20fashion%20minimalist%20background&image_size=square_hd'
+    ],
+    stock_quantity: 12,
+    is_active: true,
+    created_at: '2024-01-13T10:00:00Z',
+    updated_at: '2024-01-13T10:00:00Z',
+  },
+  {
+    id: '4',
+    name: 'ウールトレンチコート',
+    description: '高品質なウール素材を使用したトレンチコート。クラシックなデザインで、長年愛用できる一枚です。',
+    price: 45800,
+    category: 'outerwear',
+    brand: 'Premium Coat',
+    sizes: ['S', 'M', 'L', 'XL'],
+    colors: ['ベージュ', 'キャメル', 'ブラック', 'ネイビー'],
+    images: [
+      'https://trae-api-sg.mchost.guru/api/ide/v1/text_to_image?prompt=wool%20trench%20coat%20beige%20premium%20quality%20professional%20photography%20fashion%20minimalist%20background&image_size=square_hd',
+      'https://trae-api-sg.mchost.guru/api/ide/v1/text_to_image?prompt=wool%20trench%20coat%20camel%20premium%20quality%20professional%20photography%20fashion%20minimalist%20background&image_size=square_hd',
+      'https://trae-api-sg.mchost.guru/api/ide/v1/text_to_image?prompt=wool%20trench%20coat%20black%20premium%20quality%20professional%20photography%20fashion%20minimalist%20background&image_size=square_hd'
+    ],
+    stock_quantity: 8,
+    is_active: true,
+    created_at: '2024-01-12T10:00:00Z',
+    updated_at: '2024-01-12T10:00:00Z',
+  },
+  {
+    id: '5',
+    name: 'レザーハンドバッグ',
+    description: 'イタリア製レザーを使用した高級ハンドバッグ。シンプルながらも高級感のあるデザインが特徴です。',
+    price: 38500,
+    category: 'accessories',
+    brand: 'Luxury Leather',
+    sizes: ['フリーサイズ'],
+    colors: ['ブラック', 'ブラウン', 'ベージュ', 'ワインレッド'],
+    images: [
+      'https://trae-api-sg.mchost.guru/api/ide/v1/text_to_image?prompt=leather%20handbag%20black%20italian%20leather%20luxury%20professional%20photography%20fashion%20minimalist%20background&image_size=square_hd',
+      'https://trae-api-sg.mchost.guru/api/ide/v1/text_to_image?prompt=leather%20handbag%20brown%20italian%20leather%20luxury%20professional%20photography%20fashion%20minimalist%20background&image_size=square_hd',
+      'https://trae-api-sg.mchost.guru/api/ide/v1/text_to_image?prompt=leather%20handbag%20beige%20italian%20leather%20luxury%20professional%20photography%20fashion%20minimalist%20background&image_size=square_hd'
+    ],
+    stock_quantity: 15,
+    is_active: true,
+    created_at: '2024-01-11T10:00:00Z',
+    updated_at: '2024-01-11T10:00:00Z',
+  },
+  {
+    id: '6',
+    name: 'シルクスカーフ',
+    description: '上質なシルク素材のスカーフ。鮮やかな色使いと繊細な柄が特徴で、アクセントとして活躍します。',
+    price: 8900,
+    category: 'accessories',
+    brand: 'Silk Collection',
+    sizes: ['フリーサイズ'],
+    colors: ['ブルー', 'ピンク', 'イエロー', 'グリーン'],
+    images: [
+      'https://trae-api-sg.mchost.guru/api/ide/v1/text_to_image?prompt=silk%20scarf%20blue%20elegant%20pattern%20professional%20photography%20fashion%20minimalist%20background&image_size=square_hd',
+      'https://trae-api-sg.mchost.guru/api/ide/v1/text_to_image?prompt=silk%20scarf%20pink%20elegant%20pattern%20professional%20photography%20fashion%20minimalist%20background&image_size=square_hd',
+      'https://trae-api-sg.mchost.guru/api/ide/v1/text_to_image?prompt=silk%20scarf%20yellow%20elegant%20pattern%20professional%20photography%20fashion%20minimalist%20background&image_size=square_hd'
+    ],
+    stock_quantity: 32,
+    is_active: true,
+    created_at: '2024-01-10T10:00:00Z',
+    updated_at: '2024-01-10T10:00:00Z',
+  },
+  {
+    id: '7',
+    name: 'カシミヤニットセーター',
+    description: '上質なカシミヤ100%のニットセーター。ふんわりとした触り心地で、保温性にも優れています。',
+    price: 32800,
+    category: 'tops',
+    brand: 'Cashmere Premium',
+    sizes: ['S', 'M', 'L', 'XL'],
+    colors: ['ベージュ', 'グレー', 'ネイビー', 'ブラック'],
+    images: [
+      'https://trae-api-sg.mchost.guru/api/ide/v1/text_to_image?prompt=cashmere%20knit%20sweater%20beige%20luxury%20soft%20professional%20photography%20fashion%20minimalist%20background&image_size=square_hd',
+      'https://trae-api-sg.mchost.guru/api/ide/v1/text_to_image?prompt=cashmere%20knit%20sweater%20gray%20luxury%20soft%20professional%20photography%20fashion%20minimalist%20background&image_size=square_hd',
+      'https://trae-api-sg.mchost.guru/api/ide/v1/text_to_image?prompt=cashmere%20knit%20sweater%20navy%20luxury%20soft%20professional%20photography%20fashion%20minimalist%20background&image_size=square_hd'
+    ],
+    stock_quantity: 20,
+    is_active: true,
+    created_at: '2024-01-09T10:00:00Z',
+    updated_at: '2024-01-09T10:00:00Z',
+  },
+  {
+    id: '8',
+    name: 'プリーツスカート',
+    description: '動きに合わせて揺れる美しいプリーツスカート。ウエストはゴム仕様で着心地も抜群です。',
+    price: 15800,
+    category: 'bottoms',
+    brand: 'Elegant Skirt',
+    sizes: ['S', 'M', 'L'],
+    colors: ['ブラック', 'ネイビー', 'ベージュ', 'ワインレッド'],
+    images: [
+      'https://trae-api-sg.mchost.guru/api/ide/v1/text_to_image?prompt=pleated%20skirt%20black%20elegant%20movement%20professional%20photography%20fashion%20minimalist%20background&image_size=square_hd',
+      'https://trae-api-sg.mchost.guru/api/ide/v1/text_to_image?prompt=pleated%20skirt%20navy%20elegant%20movement%20professional%20photography%20fashion%20minimalist%20background&image_size=square_hd',
+      'https://trae-api-sg.mchost.guru/api/ide/v1/text_to_image?prompt=pleated%20skirt%20beige%20elegant%20movement%20professional%20photography%20fashion%20minimalist%20background&image_size=square_hd'
+    ],
+    stock_quantity: 28,
+    is_active: true,
+    created_at: '2024-01-08T10:00:00Z',
+    updated_at: '2024-01-08T10:00:00Z',
+  },
+];
+
+// レビューデータ
+export const REVIEWS: Review[] = [
+  {
+    id: '1',
+    user_id: 'user1',
+    product_id: '1',
+    user: {
+      id: 'user1',
+      email: 'tanaka@example.com',
+      name: '田中花子',
+      role: 'user',
+      created_at: '2023-01-01T00:00:00Z',
+      updated_at: '2023-01-01T00:00:00Z',
+    },
+    rating: 5,
+    comment: 'とても素敵なブラウスです。生地も高級感があり、オフィスカジュアルにぴったりです。',
+    is_verified_purchase: true,
+    created_at: '2024-01-16T10:00:00Z',
+  },
+  {
+    id: '2',
+    user_id: 'user2',
+    product_id: '1',
+    user: {
+      id: 'user2',
+      email: 'sato@example.com',
+      name: '佐藤美咲',
+      role: 'user',
+      created_at: '2023-02-01T00:00:00Z',
+      updated_at: '2023-02-01T00:00:00Z',
+    },
+    rating: 4,
+    comment: 'デザインは素敵ですが、サイズが少し大きめでした。ワンサイズ下を検討中です。',
+    is_verified_purchase: true,
+    created_at: '2024-01-17T10:00:00Z',
+  },
+  {
+    id: '3',
+    user_id: 'user3',
+    product_id: '2',
+    user: {
+      id: 'user3',
+      email: 'yamada@example.com',
+      name: '山田太郎',
+      role: 'user',
+      created_at: '2023-03-01T00:00:00Z',
+      updated_at: '2023-03-01T00:00:00Z',
+    },
+    rating: 5,
+    comment: '履き心地が最高です！ストレッチが効いていて、動きやすいのにきれいなシルエットを保ちます。',
+    is_verified_purchase: true,
+    created_at: '2024-01-15T10:00:00Z',
+  },
+];
