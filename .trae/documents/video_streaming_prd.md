@@ -1,81 +1,98 @@
-## 1. 製品概要
-モダンでかっこいいデザインの動画配信プラットフォーム。Netflixのような直感的なUIで、ユーザーが快適に動画を視聴できるサービス。
-- 問題解決: 従来の動画配信サービスの複雑なUIを改善し、シンプルで美しいデザインを提供
-- 対象ユーザー: 動画コンテンツを楽しみたい全てのユーザー
-- 価値提供: 高品質な視聴体験とパーソナライズされたコンテンツ推薦
+## 1. Product Overview
 
-## 2. コア機能
+A Netflix-like video streaming service that allows users to browse, search, and watch video content with personalized recommendations and user profiles. The service provides a modern, responsive interface for video consumption across multiple devices.
 
-### 2.1 ユーザーロール
-| ロール | 登録方法 | コア権限 |
-|------|----------|----------|
-| 一般ユーザー | メールアドレス登録 | 動画視聴、検索、お気に入り登録 |
-| プレミアム会員 | 支払いアップグレード | 高画質視聴、ダウンロード、複数デバイス同時視聴 |
+- Target users: General consumers seeking entertainment content
+- Market value: Provides accessible video streaming with intuitive user experience and content discovery features
 
-### 2.2 機能モジュール
-動画配信サイトは以下の主要ページで構成される：
-1. **ホームページ**: ヒーローセクション、おすすめ動画、カテゴリ別一覧
-2. **動画再生ページ**: 動画プレーヤー、関連動画、コメント
-3. **検索ページ**: 検索バー、フィルター、検索結果
-4. **マイページ**: 視聴履歴、お気に入り、アカウント設定
+## 2. Core Features
 
-### 2.3 ページ詳細
-| ページ名 | モジュール名 | 機能説明 |
-|-----------|-------------|-------------|
-| ホームページ | ヒーローセクション | トレンド動画を自動スライドショーで表示、再生ボタンで即座に視聴開始 |
-| ホームページ | カテゴリ別一覧 | ジャンル別に動画をカルーセル形式で表示、ホバーでプレビュー表示 |
-| ホームページ | ナビゲーションバー | ロゴ、検索ボックス、ユーザープロフィール、メニューアクセス |
-| 動画再生ページ | 動画プレーヤー | 再生/一時停止、音量調整、画質選択、字幕、全画面表示 |
-| 動画再生ページ | 関連動画 | 視聴中の動画に関連するコンテンツを表示 |
-| 動画再生ページ | 動画情報 | タイトル、説明文、キャスト、公開年、評価を表示 |
-| 検索ページ | 検索バー | リアルタイム検索、検索履歴、サジェスト機能 |
-| 検索ページ | フィルター | ジャンル、年代、評価、再生時間での絞り込み |
-| 検索ページ | 検索結果 | グリッドレイアウトで動画サムネイルと基本情報を表示 |
-| マイページ | 視聴履歴 | 視聴済み動画の一覧、続きから再生ボタン |
-| マイページ | お気に入り | ユーザーが保存した動画の管理 |
-| マイページ | アカウント設定 | プロフィール編集、パスワード変更、支払い方法管理 |
+### 2.1 User Roles
 
-## 3. コアプロセス
-### 一般ユーザーフロー
-1. ホームページでトレンド動画を閲覧
-2. 検索またはカテゴリブラウジングで興味のある動画を発見
-3. 動画をクリックして詳細ページへ
-4. 動画を再生して視聴開始
-5. お気に入りに追加または評価を行う
+| Role | Registration Method | Core Permissions |
+|------|---------------------|------------------|
+| Guest User | No registration required | Browse content, view trailers, limited video preview |
+| Registered User | Email registration | Full video access, create watchlist, continue watching, rate content |
+| Premium User | Subscription upgrade | HD/4K streaming, multiple profiles, download for offline viewing |
+
+### 2.2 Feature Module
+
+The video streaming service consists of the following main pages:
+1. **Home page**: Hero banner, category-based video rows, personalized recommendations, navigation header
+2. **Browse page**: Category filters, genre navigation, trending content, new releases
+3. **Video player page**: Full-screen video player, playback controls, subtitles, quality selection, next episode suggestions
+4. **Search page**: Search bar, search results with filters, content suggestions
+5. **User profile page**: Profile management, viewing history, watchlist, account settings
+6. **Login/Register page**: Authentication forms, social login options, password recovery
+
+### 2.3 Page Details
+
+| Page Name | Module Name | Feature description |
+|-----------|-------------|---------------------|
+| Home page | Hero banner | Display featured content with auto-playing preview, title, description, and play button |
+| Home page | Video rows | Horizontal scrolling rows organized by categories (Trending, New Releases, Top 10, etc.) |
+| Home page | Navigation header | Logo, main menu, search icon, user profile avatar, responsive hamburger menu |
+| Browse page | Category filters | Genre-based filtering, year filters, rating filters, content type selection |
+| Browse page | Content grid | Grid layout of video thumbnails with hover effects showing preview and details |
+| Video player page | Video controls | Play/pause, seek bar, volume control, fullscreen toggle, playback speed |
+| Video player page | Quality selection | Auto, 720p, 1080p, 4K options based on user's connection and subscription |
+| Video player page | Subtitles | Multiple language subtitle options, closed captions toggle |
+| Search page | Search functionality | Real-time search suggestions, search history, voice search option |
+| Search page | Results display | Filtered results by relevance, genre, year, with sorting options |
+| User profile page | Profile management | Multiple profiles per account, profile pictures, viewing preferences |
+| User profile page | Watchlist | Add/remove content, continue watching list, viewing progress tracking |
+| Login/Register page | Authentication | Email/password login, social login (Google, Facebook), remember me option |
+
+## 3. Core Process
+
+### User Flow (Registered User)
+1. User lands on homepage and sees personalized content recommendations
+2. User can browse categories or search for specific content
+3. User clicks on video thumbnail to view details or play immediately
+4. Video player opens with full-screen experience and controls
+5. User can add content to watchlist for later viewing
+6. System tracks viewing progress for "continue watching" feature
+7. User can switch between profiles for personalized experiences
+
+### Guest User Flow
+1. Browse available content with limited preview access
+2. View trailers and content descriptions
+3. Prompted to register for full access when attempting to watch
 
 ```mermaid
 graph TD
-    A[ホームページ] --> B[動画検索/ブラウジング]
-    B --> C[動画詳細ページ]
-    C --> D[動画再生]
-    D --> E[お気に入り/評価]
-    E --> F[マイページ]
-    F --> A
+    A[Home Page] --> B[Browse/Search]
+    B --> C[Video Details]
+    C --> D[Video Player]
+    D --> E[Continue Watching]
+    B --> F[Watchlist]
+    A --> G[User Profile]
+    G --> H[Login/Register]
+    H --> I[Full Access]
 ```
 
-## 4. ユーザーインターフェースデザイン
+## 4. User Interface Design
 
-### 4.1 デザインスタイル
-- **プライマリカラー**: #E50914 (Netflixレッド)
-- **セカンダリカラー**: #141414 (ダークグレー)
-- **背景色**: #000000 (ブラック)
-- **テキスト色**: #FFFFFF (ホワイト)
-- **ボタンスタイル**: 角丸なし、ホバー時に明るくなる
-- **フォント**: Helvetica Neue, Arial, sans-serif
-- **レイアウト**: カードベース、グリッドシステム
-- **アニメーション**: スムーズなフェードイン、スライド効果
+### 4.1 Design Style
+- **Primary colors**: Dark theme (#141414 background, #E50914 Netflix red accent)
+- **Secondary colors**: Gray tones (#564D4D, #808080, #B3B3B3) for text and UI elements
+- **Button style**: Rounded corners, gradient hover effects, prominent red for primary actions
+- **Typography**: Netflix Sans or similar sans-serif, 16px base font size
+- **Layout**: Card-based design, full-width hero sections, responsive grid layouts
+- **Icons**: Minimalist line icons, smooth animations, intuitive symbols
 
-### 4.2 ページデザイン概要
-| ページ名 | モジュール名 | UI要素 |
+### 4.2 Page Design Overview
+
+| Page Name | Module Name | UI Elements |
 |-----------|-------------|-------------|
-| ホームページ | ヒーローセクション | 全画面背景画像、中央に大きな再生ボタン、フェードインアニメーション |
-| ホームページ | カテゴリ一覧 | 横スクロールカルーセル、ホバーで拡大、影付きカードデザイン |
-| 動画再生ページ | プレーヤー | ブラックのコントロールバー、大きな再生ボタン、シンプルなアイコン |
-| 検索ページ | 検索バー | 白い背景、赤い検索ボタン、自動補完表示 |
-| マイページ | 視聴履歴 | グリッドレイアウト、サムネイル画像、視聴進捗バー |
+| Home page | Hero banner | Full-width video background with gradient overlay, large title text, play/info buttons positioned bottom-left |
+| Home page | Video rows | Horizontal scrolling rows with video cards, smooth hover animations showing title and rating |
+| Video player page | Controls bar | Semi-transparent black bar at bottom, large play button, progress bar with preview thumbnails |
+| Search page | Search bar | Prominent search input at top, instant suggestions dropdown, clear search button |
+| User profile page | Profile cards | Circular profile pictures, easy switching animation, viewing statistics display |
 
-### 4.3 レスポンシブデザイン
-- **デスクトップファースト**: 1920pxベースで設計
-- **モバイル対応**: スマートフォン、タブレットに最適化
-- **タッチ対応**: モバイルデバイスでのスワイプ操作対応
-- **ブレークポイント**: 768px（タブレット）、480px（スマートフォン）
+### 4.3 Responsiveness
+- **Desktop-first**: Optimized for large screens (1920px+), 3-column grid layout
+- **Tablet adaptation**: 2-column grid, adjusted hero banner height, touch-friendly controls
+- **Mobile optimization**: Single column layout, swipe gestures for navigation, bottom navigation bar
+- **Touch interactions**: Swipe for video rows, pinch to zoom on video details, tap-to-play functionality
