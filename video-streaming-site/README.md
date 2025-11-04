@@ -187,3 +187,6 @@ For support, please open an issue on GitHub or contact the development team.
 ---
 
 Built with ❤️ using React, TypeScript, and Supabase.
+
+参考プロンプト
+https://docs.google.com/document/d/1szcoK7zJk5_6TT4947WDoXp5xRoc5zHxoutR_uih1No/mobilebasic
